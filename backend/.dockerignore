@@ -1,0 +1,11 @@
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+data
+.git
+.gitignore
+train_mnist.py
+train_mnist_cnn.py
+mnist_model.pth
