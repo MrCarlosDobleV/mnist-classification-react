@@ -150,17 +150,6 @@ VITE_API_BASE_URL
 
 ---
 
-## 🧪 Demo
-
-* Draw a digit in the canvas
-* Click predict
-* View:
-
-  * Main prediction
-  * Top-3 probabilities
-
----
-
 ## 📌 Future Improvements
 
 * Support mobile interaction
