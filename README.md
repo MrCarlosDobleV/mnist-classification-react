@@ -5,6 +5,8 @@ This project is a full-stack AI application that allows users to draw a digit in
 
 It combines a Python backend for inference with a modern React frontend, and is deployed on AWS.
 
+![mnist](https://github.com/user-attachments/assets/32460c55-42df-450e-83cc-e8d166b02979)
+
 ---
 
 ## 🚀 Project Overview
