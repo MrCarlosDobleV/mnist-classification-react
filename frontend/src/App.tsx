@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
+console.log("API:", API_BASE_URL);
+
 type PredictionResponse = {
   predictions: number[];
   confidences: number[];
@@ -98,20 +102,20 @@ export default function App() {
 
       try {
         const response = await axios.post<PredictionResponse>(
-          "http://127.0.0.1:8000/predict",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
+          `${API_BASE_URL}/predict`,
+          formData
         );
 
         setPredictions(response.data.predictions);
         setConfidences(response.data.confidences);
       } catch (error) {
-        console.error("Prediction error:", error);
-        alert("Could not connect to backend.");
+        if (axios.isAxiosError(error)) {
+          console.error("Prediction error:", error.message);
+          console.error("Status:", error.response?.status);
+          console.error("Response data:", error.response?.data);
+        } else {
+          console.error("Unexpected error:", error);
+        }
       } finally {
         setLoading(false);
       }
