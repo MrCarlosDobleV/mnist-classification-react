@@ -1,6 +1,8 @@
 
 # MNIST Digit Classifier – FastAPI + React + AWS
 
+https://production.dpi73xcxc5mxp.amplifyapp.com/
+
 This project is a full-stack AI application that allows users to draw a digit in the browser and receive model predictions with confidence scores.
 
 It combines a Python backend for inference with a modern React frontend, and is deployed on AWS.
